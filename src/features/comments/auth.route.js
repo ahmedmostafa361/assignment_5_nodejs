@@ -1,0 +1,10 @@
+const { Router } = require('express');
+const authRouter = Router();
+const authController = require('./auth.controller');
+authRouter.post('/register', authController.registerController);
+authRouter.post('/login', authController.loginController);
+// authRouter.posts('/logout', authController.logoutController);
+// authRouter.posts('/send-otp', authController.sendOTPController);
+// authRouter.posts('/verify-otp', authController.verifyOTPController);
+// authRouter.posts('/reset-password',authController.resetPasswordController);
+module.exports = authRouter;
