@@ -3,11 +3,13 @@ const express = require('express');
 const { sequelize } = require('./common/db/associate');
 const userRoutes = require('./features/users/user.route');
 const postRoutes = require('./features/posts/post.route');
+const commentRoutes = require('./features/comments/comment.route');
 const app = express();
 app.use(express.json());
 
 app.use('/users', userRoutes);
 app.use('/posts', postRoutes)
+app.use('/comments', commentRoutes)
 
 
 /// handle invalid routes
